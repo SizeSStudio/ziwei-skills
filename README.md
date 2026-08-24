@@ -1,4 +1,4 @@
-# 🔮 Ziwei Skills (紫微智械)
+# 🔮 Ziwei Skills (紫微占卜)
 
 > 纯 TypeScript 原生紫微排盘引擎、原始紫微知识库与 Claude Code / Codex 高保真推演 Skill 套件。
 
