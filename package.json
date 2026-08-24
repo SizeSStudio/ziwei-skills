@@ -1,0 +1,31 @@
+{
+  "name": "ziwei-skills",
+  "version": "1.0.0",
+  "description": "Native TypeScript Ziwei Doushu Charting Engine, Divination Suite & High-Fidelity Natal Analysis Skills for Claude / Codex",
+  "main": "engine/dist/src/index.js",
+  "bin": {
+    "ziwei-chart": "engine/dist/src/cli/ziwei-chart.js"
+  },
+  "scripts": {
+    "build": "cd engine && npm run build",
+    "test": "cd engine && npm test",
+    "clean": "cd engine && npm run clean",
+    "cli": "node engine/dist/src/cli/ziwei-chart.js",
+    "install-skills": "bash scripts/install-skills.sh"
+  },
+  "keywords": [
+    "ziwei",
+    "ziwei-doushu",
+    "astrology",
+    "claude-skill",
+    "codex-skill",
+    "divination",
+    "ziweixingyu"
+  ],
+  "author": "SizeSStudio",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^25.0.0",
+    "typescript": "^5.9.3"
+  }
+}

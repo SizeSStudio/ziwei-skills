@@ -1,0 +1,6 @@
+interface:
+  display_name: "Ziwei Native Chart"
+  short_description: "Build JSON, text, and HTML charts from APK-native logic"
+  default_prompt: "Use $ziwei-chart to build an APK-native Ziwei chart from birth time, place or longitude, and gender."
+policy:
+  allow_implicit_invocation: true

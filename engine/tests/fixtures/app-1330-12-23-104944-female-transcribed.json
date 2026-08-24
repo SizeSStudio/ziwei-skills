@@ -1,0 +1,96 @@
+{
+  "provenance": {
+    "kind": "transcribed-sample",
+    "source": "user-transcribed Ziwei Xingyu APP chart",
+    "capturedOn": "2026-07-22",
+    "boundary": "No raw APP JSON was supplied. Longitude 120 is user-confirmed as the APP random-event default. The full local calendar build currently stops at native-calendar-core-prefix:event-vector-rollover, so this fixture characterizes only the downstream fields present in the transcription."
+  },
+  "reportedCalendar": {
+    "clockTime": "1330-12-23 10:49:44",
+    "trueSolarTime": "1330-12-23 10:45:19",
+    "lunarTime": "1330年冬月十四日巳时",
+    "fourPillars": "庚午 戊子 庚寅 辛巳"
+  },
+  "inputs": {
+    "longitude": 120,
+    "hourCode": 10,
+    "appMode2Body": "2|1330|12|23|10|30|30|120.000|-8|2|0|0|0",
+    "lunarYearStem": "庚",
+    "lunarYearBranch": "午",
+    "lunarMonth": 11,
+    "lunarDay": 14,
+    "hourBranch": "巳",
+    "gender": "female",
+    "genderPolarity": "阳女",
+    "mingBranch": "未",
+    "shenBranch": "巳"
+  },
+  "expected": {
+    "fiveElements": "木三局",
+    "laiyinBranch": "辰",
+    "mingMaster": "武曲",
+    "shenMaster": "铃星",
+    "palaces": {
+      "子": {
+        "palace": "交友", "stem": "戊", "stars": { "天同": "庙", "太阴": "庙", "右弼": "庙", "天哭": "平", "天虚": "陷", "天伤": "陷" },
+        "produced": ["禄:贪狼:丑:50", "权:太阴:子:10", "科:右弼:子:80", "忌:天机:辰:30"],
+        "majorLimit": "73~82", "minorLimit": "5,17,29,41,53,65", "cycles": ["养", "病符", "灾煞", "大耗"]
+      },
+      "丑": {
+        "palace": "迁移", "stem": "己", "stars": { "武曲": "庙", "贪狼": "庙", "天才": "平", "天钺": "", "大耗": "平", "龙德": "" },
+        "produced": ["禄:武曲:丑:50", "权:贪狼:丑:20", "科:天梁:辰:80", "忌:文曲:酉:90"],
+        "majorLimit": "63~72", "minorLimit": "4,16,28,40,52,64", "cycles": ["胎", "喜神", "天煞", "龙德"]
+      },
+      "寅": {
+        "palace": "疾厄", "stem": "戊", "stars": { "太阳": "平", "巨门": "旺", "左辅": "旺", "蜚廉": "", "天巫": "", "天厨": "", "天使": "平" },
+        "produced": ["禄:贪狼:丑:50", "权:太阴:子:10", "科:右弼:子:80", "忌:天机:辰:30"],
+        "majorLimit": "53~62", "minorLimit": "3,15,27,39,51,63", "cycles": ["绝", "飞廉", "指背", "白虎"]
+      },
+      "卯": {
+        "palace": "财帛", "stem": "己", "stars": { "天相": "庙", "天喜": "旺", "咸池": "平", "天德": "平", "三台": "陷" },
+        "produced": ["禄:武曲:丑:50", "权:贪狼:丑:20", "科:天梁:辰:80", "忌:文曲:酉:90"],
+        "majorLimit": "43~52", "minorLimit": "2,14,26,38,50,62", "cycles": ["墓", "奏书", "咸池", "天德"]
+      },
+      "辰": {
+        "palace": "子女", "stem": "庚", "stars": { "天机": "庙", "天梁": "庙", "地劫": "庙", "凤阁": "陷", "年解": "庙", "寡宿": "陷" },
+        "produced": ["禄:太阳:寅:40", "权:武曲:丑:20", "科:太阴:子:80", "忌:天同:子:99"],
+        "majorLimit": "33~42", "minorLimit": "1,13,25,37,49,61", "cycles": ["死", "将军", "月煞", "吊客"]
+      },
+      "巳": {
+        "palace": "夫妻", "stem": "辛", "stars": { "紫微": "旺", "七杀": "旺", "文昌": "利", "恩光": "平", "破碎": "陷" },
+        "produced": ["禄:巨门:寅:40", "权:太阳:寅:80", "科:文曲:酉:10", "忌:文昌:巳:30"],
+        "majorLimit": "23~32", "minorLimit": "12,24,36,48,60,72", "cycles": ["病", "小耗", "亡神", "病符"]
+      },
+      "午": {
+        "palace": "兄弟", "stem": "壬", "stars": { "地空": "陷", "火星": "庙", "阴煞": "", "解神": "庙", "天福": "平", "截空": "庙" },
+        "produced": ["禄:天梁:辰:50", "权:紫微:巳:90", "科:左辅:寅:90", "忌:武曲:丑:95"],
+        "majorLimit": "13~22", "minorLimit": "11,23,35,47,59,71", "cycles": ["衰", "青龙", "将星", "岁建"]
+      },
+      "未": {
+        "palace": "命宫", "stem": "癸", "stars": { "陀罗": "", "天魁": "", "天刑": "陷", "封诰": "", "天空": "陷", "副截": "庙" },
+        "produced": ["禄:破军:酉:99", "权:巨门:寅:80", "科:太阴:子:80", "忌:贪狼:丑:95"],
+        "majorLimit": "3~12", "minorLimit": "10,22,34,46,58,70", "cycles": ["帝旺", "力士", "攀鞍", "晦气"]
+      },
+      "申": {
+        "palace": "父母", "stem": "甲", "stars": { "铃星": "庙", "禄存": "庙", "天马": "旺", "孤辰": "平" },
+        "produced": ["禄:廉贞:酉:99", "权:破军:酉:20", "科:武曲:丑:90", "忌:太阳:寅:35"],
+        "majorLimit": "113~122", "minorLimit": "9,21,33,45,57,69", "cycles": ["临官", "博士", "岁驿", "丧门"]
+      },
+      "酉": {
+        "palace": "福德", "stem": "乙", "stars": { "廉贞": "不", "破军": "旺", "文曲": "旺", "擎羊": "庙", "红鸾": "旺", "天贵": "庙" },
+        "produced": ["禄:天机:辰:50", "权:天梁:辰:90", "科:紫微:巳:20", "忌:太阴:子:99"],
+        "majorLimit": "103~112", "minorLimit": "8,20,32,44,56,68", "cycles": ["冠带", "官府", "息神", "贯索"]
+      },
+      "戌": {
+        "palace": "田宅", "stem": "丙", "stars": { "龙池": "陷", "华盖": "平", "天月": "", "旬空": "陷" },
+        "produced": ["禄:天同:子:50", "权:天机:辰:90", "科:文昌:巳:20", "忌:廉贞:酉:90"],
+        "majorLimit": "93~102", "minorLimit": "7,19,31,43,55,67", "cycles": ["沐浴", "伏兵", "华盖", "官符"]
+      },
+      "亥": {
+        "palace": "官禄", "stem": "丁", "stars": { "天府": "庙", "天姚": "陷", "月德": "", "天官": "旺", "八座": "庙", "天寿": "旺", "台辅": "", "劫煞": "陷", "副旬": "平" },
+        "produced": ["禄:太阴:子:50", "权:天同:子:10", "科:天机:辰:80", "忌:巨门:寅:35"],
+        "majorLimit": "83~92", "minorLimit": "6,18,30,42,54,66", "cycles": ["长生", "大耗", "劫煞", "小耗"]
+      }
+    }
+  }
+}
