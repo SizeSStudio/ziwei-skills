@@ -3,8 +3,8 @@ title: 紫微星语 APP 入门 KB
 type: source
 ideology: 原始紫微
 status: 原始素材
-source: xyyw.kb.content.html (APK internal)
-extracted_from: app.apk
+source: /Users/sizes-studio/Documents/Personal/apk-reverse/app-apk/xyyw.kb.content.html
+extracted_from: /Users/sizes-studio/Downloads/app.apk
 created: 2026-07-09
 ---
 
