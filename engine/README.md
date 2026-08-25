@@ -46,18 +46,16 @@ node dist/src/cli/ziwei-chart.js build \
 ## 目录结构
 
 ```
-skills/ziwei-chart/
-├── SKILL.md                  # Skill 说明与命令行调用规范
-├── README.md                 # 本说明文件
-├── package.json              # 项目依赖与测试脚本 (Vitest)
+engine/
+├── package.json              # 项目配置与编译脚本
 ├── tsconfig.json             # TypeScript 配置
-├── src/                      # 纯 TypeScript 排盘核心实现
-│   ├── calendar/             # 农历转换、节气、真太阳时算法
-│   ├── engine/               # 宫位定位、星曜安星、四化计算、三层卦
-│   ├── render/               # JSON, TXT, HTML 渲染器
-│   └── cli/                  # CLI 入口
-├── tests/                    # 227 项 Vitest 单元与黄金回归用例
-└── references/               # 逆向契约、流派策略与字段来源定义
+├── assets/                   # 原生查表二进制与压缩资源
+└── src/                      # 纯 TypeScript 排盘核心实现
+    ├── calendar/             # 农历转换、节气、真太阳时算法
+    ├── engine/               # 宫位定位、星曜安星、四化计算、三层卦
+    ├── render/               # JSON, TXT, HTML 渲染器
+    ├── schema/               # 结构定义与校验
+    └── cli/                  # CLI 入口
 ```
 
 ---

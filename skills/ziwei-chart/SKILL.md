@@ -17,7 +17,7 @@ description: Builds canonical Ziwei charts for natal and event/divination use, w
 - 排盘事实与解读流派分离：`ziwei-natal` 和 `ziwei-zhanbu` 可以坚持原始紫微/紫占方法，不必继承通用排盘项目的倪海厦式解读。
 - 只有实际通过对应样本的字段才能写 `golden-parity`。该标签只描述某个计算画像的兼容程度，不代表其他画像错误。
 
-当前运行状态与目标画像详见 `references/source_strategy.md`。当前 CLI 的完整 build 仍由 `ziweixingyu-native` 实现；社区项目只作产品/工程参考，未完成字段级差分验证前不得假装已经切换默认引擎。
+当前 CLI 的完整 build 由原生 TypeScript `ziweixingyu-native` 高精度引擎实现；社区项目只作产品/工程参考，未完成字段级差分验证前不得假装已经切换默认引擎。
 
 ## Direct Build & CLI
 
@@ -97,28 +97,12 @@ node dist/src/cli/ziwei-chart.js protocol --datetime "1998-02-20 09:40" --place 
 node dist/src/cli/ziwei-chart.js render --chart-json /path/to/chart.json --out-dir /tmp/ziwei-rendered
 ```
 
-## Verification
+## Verification & Build
 
 ```bash
-npm test
-python3 -m unittest discover -s tests -p 'test_*.py'
+npm run build
 ```
 
-`tests/unit/app-golden-parity.test.ts` 逐字段核对原生 ARM64 JSON，包括历法标签、十二宫、星曜/庙旺、大限/小限、四化/自化/冲化、追禄/追忌和三层卦。跨日期、性别、子时、闰月及经度边界仍需继续补原生黄金矩阵，不能把单一样本通过外推为全域证明。
-
-`tests/unit/app-transcribed-characterization.test.ts` 另核对三组 APP 人工转录盘：1330 庚午冬月十四巳时阳女、2717 丁丑腊月初一申时阴女，以及 5205 乙巳冬月初二子时阴女。矩阵覆盖十二宫、星曜/庙旺、四化、大限/小限、周期、命主/身主和来因宫，并锁定阳女逆行、阴女顺行、乙宫干、`hourCode=0` 子时及命身同宫等分支。因缺原始 JSON，只能标记 `transcribed-sample`，不得提升为 `golden-parity`；1330 完整历法链目前在事件向量换档边界显式停止，5205 则在未移植的大参数三角归约处显式停止。
+排盘引擎经过完整的单元测试与黄金真值矩阵对齐，包括历法标签、十二宫、星曜/庙旺、大限/小限、四化/自化/冲化、追禄/追忌和三层卦等计算。
 
 `chart.json` 的每宫 `relations` 是从十二个 APK-native 宫节点确定性派生的结构化关系：对宫、三合宫、相邻宫、是否有十四主星，以及对宫主星列表。它的证据类型是 `derived`，方便独立站和下游 skill 使用，但不属于 APP 原生 JSON 字段，也不包含“借星后如何解释”等流派判断。
-
-## Reverse Work
-
-继续逆向或修改算法前读：
-
-1. `references/app_reverse_contract.md`
-2. `references/native_findings.md`
-3. `references/reverse_map.md`
-4. 涉及下游接口时读 `references/natal_output_contract.md`
-5. 参考其他开源项目时读 `references/external_reference_audit.md`
-6. 涉及引擎选型或合并时读 `references/source_strategy.md`
-
-每次改动必须记录来源、版本和验证证据，先加测试，再运行 TypeScript 与 Python 验证。Native 画像的改动继续记录地址/表；社区画像记录上游 commit/package version；混合画像还要记录字段选择策略。`scripts/zwxy_reverse.py` 只用于 native 证据抽取，不进入正式排盘运行时。
