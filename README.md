@@ -18,7 +18,7 @@
   - `/ziwei-natal`：终生命盘深度系统解析（三锚定位、生年四化主线、命身飞化追忌对冲、一六共宗表里互证、正向应卦实操表）。
   - `/ziwei-zhanbu`：针对具体突发事件的紫微紫占推演（心念起卦、分钟级三层卦分针/秒针钟表模型、同音象形物象化）。
 - 📚 **开箱即用的完整知识库（KB）**：
-  - 包含 14 主星、5 辅星、6 煞星、14 宫位、四化合力、断事方法与紫占方法论的全部 Markdown 知识沉淀与讲义源文。
+  - 包含 14 主星、6 辅星、6 煞星、14 宫位、四化合力、断事方法与紫占方法论的全部 Markdown 知识沉淀与讲义源文。
 
 ---
 
@@ -49,7 +49,7 @@ npm run install-skills
 ```bash
 npm run cli -- build \
   --datetime "2000-01-01 12:00" \
-  --place "北京" \
+  --place "杭州" \
   --gender male \
   --out-dir ./output
 ```
@@ -126,32 +126,36 @@ ziwei-skills/
 ├── LICENSE                        # MIT 开源许可证
 ├── package.json                   # 根项目配置与 npm 脚本
 ├── engine/                        # 原生 TypeScript 排盘引擎源码
+│   ├── assets/                    # 原生查表与压缩资源
 │   ├── src/                       # 历法算法、节气、真太阳时、排盘核心、渲染器、CLI
-│   ├── tests/                     # 227 项自动化单元测试与黄金对齐测试
+│   ├── package.json
 │   └── tsconfig.json
 ├── skills/                        # 挂载至 AI 的 Skill 定义
-│   ├── ziwei-chart/               # 排盘 Skill
+│   ├── ziwei-chart/               # 原生排盘 Skill
 │   ├── ziwei-natal/               # 终生命盘深度解析 Skill
 │   └── ziwei-zhanbu/              # 紫占推演 Skill
 ├── kb/                            # 原始紫微纯知识库
 │   ├── README.md                  # 学派立场
-│   ├── 星曜/                      # 14 主星、5 辅星、6 煞星
+│   ├── 星曜/                      # 14 主星、6 辅星、6 煞星
 │   ├── 宫位/                      # 12 宫 + 身宫 + 来因宫
 │   ├── 四化/                      # 禄权科忌
 │   ├── 断事方法/                  # 命盘惯性、宫位关系、正向应卦等
+│   ├── 格局/                      # 典型格局
 │   └── 紫占方法/                  # 三层卦、物象化、十二相、追禄等
-├── sources/                       # 经典核心讲义源文
 └── scripts/
     └── install-skills.sh          # 一键安装脚本
 ```
 
 ---
 
-## 🧪 自动化测试
+## 🛠️ 构建与编译
 
 ```bash
-# 运行全部 227 项单元测试与回归矩阵
-npm test
+# 构建排盘引擎
+npm run build
+
+# 测试排盘 CLI
+npm run cli -- build --datetime "1998-02-20 09:40" --place "杭州" --gender male --out-dir /tmp/test-chart
 ```
 
 ---
